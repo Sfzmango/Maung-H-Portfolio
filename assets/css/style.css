@@ -1,6 +1,10 @@
 :root {
     --text:#F2EDD7FF;
-    --bgc1:#696667FF;
+    --bgc1:rgb(51, 49, 49);
+    --bgc2:#964F4CFF;
+    --bcg3:rgb(107, 55, 54);
+    --bcg4:#567572FF;
+    --shadow: 0px 0px 10px black, 0px 0px 10px var(--bcg3);
     font-size: 16px;
 }
 
@@ -13,6 +17,18 @@
 body {
     width: 100%;
     margin: 0;
+    padding: 0;
+}
+
+/* body::-webkit-scrollbar adjusts the width of the scrollbar on the side of the screen and makes the track transparent. Thumb changes the color of the tab. */
+
+body::-webkit-scrollbar {
+    width: .3rem;
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--bcg3);
 }
 
 nav {
@@ -20,27 +36,43 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0% 5% 0% 2%;
-    background-color: var(--bgc1);
+    background: var(--bgc1);
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+}
+
+h1 {
+    border: 1px solid black;
 }
 
 nav menu {
-    text-align:right;
+    text-shadow: var(--shadow);
 }
 
 li {
     display: inline;
     list-style:none;
-    padding-left: 40px;
 }
 
-#navlinks {
+#navlinks li {
     position: relative;
     bottom: 8px;
+    padding-left: 3rem;
 }
 
 a {
     color: var(--text);
     text-decoration: none;
+}
+
+#navlogos {
+    padding: 2rem;
+}
+
+
+#navlogos li {
+    padding: .5rem;
 }
 
 .logo {
@@ -50,19 +82,35 @@ a {
     /* padding-left: 10px; */
 }
 
-select {
-
+.dropdown img {
+    display: none;
+    max-width: 1.8rem;
+    max-height: 1.8rem;
+    position: absolute;
+    bottom:18px;
+    right: 40px;
 }
 
-.dropdown {
+.dropdownlinks {
     display: none;
 }
 
-/* @media screen and (max-width:575px) {
-    nav menu #navlinks, nav menu #navlogo {
+/* Small screen media query */
+
+@media screen and (max-width:605px) {
+    #navlinks, #navlogos {
         display: none;
     }
-    .dropdown {
-        display: inline-block;
+    .dropdown img {
+        display: block
     }
+} 
+
+.dropdown:hover .dropdownlinks{
+    display: block;
+    /* height: 400px; */
+}
+
+/* .dropdown:hover nav{
+    height: 400px;
 } */

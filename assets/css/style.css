@@ -1,8 +1,8 @@
 :root {
     --text:#F2EDD7FF;
-    --bgc1:rgb(51, 49, 49);
+    --bgc1:#333131;
     --bgc2:#964F4CFF;
-    --bcg3:rgb(107, 55, 54);
+    --bcg3:#6b3736;
     --bcg4:#567572FF;
     --shadow: 0px 0px 10px black, 0px 0px 10px var(--bcg3);
     font-size: 16px;
@@ -18,6 +18,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    margin-top: auto;
 }
 
 /* body::-webkit-scrollbar adjusts the width of the scrollbar on the side of the screen and makes the track transparent. Thumb changes the color of the tab. */
@@ -29,7 +30,14 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     background: var(--bcg3);
+    border-radius: 5px;
 }
+
+body::-webkit-scrollbar-track {
+    background: var(--bgc1);
+}
+
+/* lines 36-112 are for the navbar. */
 
 nav {
     display: flex;
@@ -40,10 +48,12 @@ nav {
     height: 4rem;
     position: fixed;
     width: 100%;
+    border-bottom: 5px solid var(--bcg3);
+    z-index: 1;
 }
 
-h1 {
-    border: 1px solid black;
+.navbar img {
+    width: 5rem;
 }
 
 nav menu {
@@ -79,7 +89,6 @@ a {
     position: relative;
     max-width: 1.8rem;
     max-height: 1.8rem;
-    /* padding-left: 10px; */
 }
 
 .dropdown img {
@@ -97,7 +106,7 @@ a {
 
 /* Small screen media query */
 
-@media screen and (max-width:605px) {
+@media screen and (max-width:650px) {
     #navlinks, #navlogos {
         display: none;
     }
@@ -108,9 +117,26 @@ a {
 
 .dropdown:hover .dropdownlinks{
     display: block;
-    /* height: 400px; */
 }
 
-/* .dropdown:hover nav{
-    height: 400px;
-} */
+/* This is the main image at the back of the page */
+
+.hero img {
+    width: 100%;
+    z-index: 2;
+}
+
+
+
+.aboutme {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    top: 63px;
+    background:var(--bgc2);
+    z-index: 3;
+}
+
+.aboutme p {
+    margin-left: 40px;
+}

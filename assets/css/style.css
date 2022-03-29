@@ -125,16 +125,21 @@ a {
 
 /* This is the main image at the back of the page */
 
-.hero-parallax {
+/* .hero-parallax {
     box-sizing: border-box;
+} */
+
+.hero-parallax {
+    overflow: hidden;
+    padding-bottom: 90vh;
 }
 
 .hero-parallax img {
-    position: static;
+    position: fixed;
     width: 100%;
+    height:100vh;
     z-index: -1;
-    margin-bottom: -50px;
-    margin-top: -50px;
+/* transform:translatey(-200px);  */
 }
 
 /* About Me css styles */
@@ -153,7 +158,7 @@ a {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 4rem;
     text-shadow: var(--shadow);
 }
 
@@ -162,7 +167,6 @@ h2 {
     margin-top: -100px;
     padding-bottom: 20px;
     background: linear-gradient(var(--transp),80%,var(--bgc2));
-    font-size: 70px;
 }
 
 #aboutme h3 {
@@ -171,11 +175,16 @@ h2 {
 } 
 
 #projects {
-    background: var(--bcg4);
+    background: var(--text);
 }
 
+#projects h2 {
+    color: var(--bgc1);
+    text-shadow: none;
+}
 #projects h3 {
     font-size: 1.5rem;
+    color: var(--bgc1);
 }
 
 #contact {

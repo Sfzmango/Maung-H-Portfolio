@@ -7,6 +7,7 @@
     --bcg5:#567572FF;
     --transp:#ffffff00;
     --shadow: 0px 0px 10px black, 0px 0px 10px var(--bcg3);
+    --shadow2: 0px 0px 20px 3px;
     font-size: 16px;
 }
 
@@ -14,16 +15,10 @@
     box-sizing: border-box;
     font-family: Garamond, serif;
     color: var(--text);
-    margin: 0;
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-
 }
 
 /* body::-webkit-scrollbar adjusts the width of the scrollbar on the side of the screen and makes the track transparent. Thumb changes the color of the tab. */
@@ -54,7 +49,7 @@ nav {
     position: fixed;
     width: 100%;
     border-bottom: 5px solid var(--bcg3);
-    z-index: 1;
+    z-index: 100;
 }
 
 .navbar img {
@@ -131,13 +126,12 @@ a {
 
 .hero-parallax {
     overflow: hidden;
-    padding-bottom: 90vh;
+    padding-bottom: 65%;
 }
 
 .hero-parallax img {
     position: fixed;
     width: 100%;
-    height:100vh;
     z-index: -1;
 /* transform:translatey(-200px);  */
 }
@@ -151,6 +145,7 @@ a {
     box-sizing: border-box;
     text-align: center;
     z-index: 3;
+    text-shadow: var(--shadow);
     /* border-top: 20px solid linear-gradient(#ffffff00,var(--bcg3)); */
     
     /* background: linear-gradient(var(--transp), var(--bgc2)); */
@@ -159,7 +154,10 @@ a {
 
 h2 {
     font-size: 4rem;
-    text-shadow: var(--shadow);
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 #aboutme h2 {
@@ -169,26 +167,84 @@ h2 {
     background: linear-gradient(var(--transp),80%,var(--bgc2));
 }
 
+#aboutDesc {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bgc2);
+}
+
+#aboutDesc img {
+    margin: 10px;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
+}
+
 #aboutme h3 {
     padding: 0px 10px 10px 10px;
-    background: var(--bgc2);
 } 
 
 #projects {
     background: var(--text);
+    text-shadow: 0px 0px 10px rgb(124, 121, 108);
+}
+
+.projects {
+    display: inline-flex;
+}
+
+/* .project1 a {
+    display: inline;
+} */
+
+.project1 a img {
+    border-radius: 5%;
+    z-index: 7;
+    width: 80%;
+    height:80%;
+    margin: 12% 0% 10% 10%;
+    border: 2px solid var(--bgc1);
+    filter: blur(8px);
 }
 
 #projects h2 {
     color: var(--bgc1);
-    text-shadow: none;
+    padding: 2rem 0 3rem 2rem;
+    text-decoration: underline var(--bgc1);
 }
 #projects h3 {
-    font-size: 1.5rem;
     color: var(--bgc1);
+    position:relative;
+    z-index: 11;
+    margin-left: 140px;
+    transform: translatey(30px);
+    font-size: 2.5rem;
+}
+
+.projectBox a img {
+    width: 70%;
+    margin: 10%;
+    border-radius: 5%;
+    filter: blur(8px);
+}
+
+a img:hover {
+    filter: none;
 }
 
 #contact {
     background: var(--bcg5);
+    text-shadow: var(--shadow);
+}
+
+#contact {
+    font-size: 1.2rem;
+    padding: .5rem 2rem .5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact span:first-child {
+    font-size: 1.4rem;
 }
 
 footer {

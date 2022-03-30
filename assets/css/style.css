@@ -1,3 +1,4 @@
+/* root stores variables and sets base font size value */
 :root {
     --text:#F2EDD7FF;
     --bgc1:#333131;
@@ -11,11 +12,15 @@
     font-size: 16px;
 }
 
+/* Universal selector that affects all elements */
+
 * {
     box-sizing: border-box;
     font-family: Garamond, serif;
     color: var(--text);
 }
+
+/* Adds smooth scrolling on the webpage instead of one that is staticky */
 
 html {
     scroll-behavior: smooth;
@@ -37,7 +42,7 @@ body::-webkit-scrollbar-track {
     background: var(--bgc1);
 }
 
-/* lines 36-112 are for the navbar. */
+/* lines 42-137 are for the navbar. */
 
 nav {
     display: flex;
@@ -114,15 +119,29 @@ a {
     }
 } 
 
+.dropdownlinks li:not(last-child) {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+
+}
+
 .dropdown:hover .dropdownlinks{
-    display: block;
+    display:flex;
+    position: absolute;
+    right: 0px;
+    bottom: -100px;
+    min-width: 40px;
+    min-height: 100%;
+    border: 2px black solid;
+    background-color: var(--bcg3);
+    padding: 12px;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 1;
+    flex-direction:column;
 }
 
 /* This is the main image at the back of the page */
-
-/* .hero-parallax {
-    box-sizing: border-box;
-} */
 
 .hero-parallax {
     overflow: hidden;
@@ -133,10 +152,9 @@ a {
     position: fixed;
     width: 100%;
     z-index: -1;
-/* transform:translatey(-200px);  */
 }
 
-/* About Me css styles */
+/* About Me css styles lines 154 - 193 */
 
 #aboutme {
     display: flex;
@@ -146,10 +164,8 @@ a {
     text-align: center;
     z-index: 3;
     text-shadow: var(--shadow);
-    /* border-top: 20px solid linear-gradient(#ffffff00,var(--bcg3)); */
-    
-    /* background: linear-gradient(var(--transp), var(--bgc2)); */
-    /* bottom: 50px; */
+    transform: translateY(-100px);
+    margin-bottom: -100px;
 }
 
 h2 {
@@ -161,9 +177,7 @@ h3 {
 }
 
 #aboutme h2 {
-    padding: 40px 0px 0px 0px;
-    margin-top: -100px;
-    padding-bottom: 20px;
+    padding: 40px 0px 20px 0px;
     background: linear-gradient(var(--transp),80%,var(--bgc2));
 }
 
@@ -183,6 +197,8 @@ h3 {
     padding: 0px 10px 10px 10px;
 } 
 
+/*  Projects css styles */
+
 #projects {
     background: var(--text);
     text-shadow: 0px 0px 10px rgb(124, 121, 108);
@@ -191,10 +207,6 @@ h3 {
 .projects {
     display: inline-flex;
 }
-
-/* .project1 a {
-    display: inline;
-} */
 
 .project1 a img {
     border-radius: 5%;
@@ -215,7 +227,7 @@ h3 {
     color: var(--bgc1);
     position:relative;
     z-index: 11;
-    margin-left: 140px;
+    margin-left: 40px;
     transform: translatey(30px);
     font-size: 2.5rem;
 }
@@ -229,7 +241,10 @@ h3 {
 
 a img:hover {
     filter: none;
+    transition: filter .5s;
 }
+
+/* Contact css styles */
 
 #contact {
     background: var(--bcg5);
@@ -247,17 +262,11 @@ a img:hover {
     font-size: 1.4rem;
 }
 
-footer {
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    background: var(--bgc1);
-}
+/* Footer css style */
 
-footer p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 2.5rem;
+footer {
+    background: var(--bgc1);
+    text-align: center;
     text-shadow: var(--shadow);
+    padding: 1%;
 }

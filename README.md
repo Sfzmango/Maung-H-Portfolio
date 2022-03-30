@@ -27,7 +27,7 @@ I have added numerous comments along both the index.html and style.css files to 
 
 ## <ins> Site Demonstration: </ins>
 
-    ### Below is a demonstration of how the page's scroll parallax and the blue removal on hover styles work. 
+    Below is a demonstration of how the page's scroll parallax and the blur removal on hover styles work. 
 ![Site Demonstration](./assets/images/site-demonstration.gif)
 
 ## <ins> Credits and License: </ins>

@@ -13,7 +13,6 @@
 }
 
 /* Universal selector that affects all elements */
-
 * {
     box-sizing: border-box;
     font-family: Garamond, serif;
@@ -21,13 +20,11 @@
 }
 
 /* Adds smooth scrolling on the webpage instead of one that is staticky */
-
 html {
     scroll-behavior: smooth;
 }
 
 /* body::-webkit-scrollbar adjusts the width of the scrollbar on the side of the screen and makes the track transparent. Thumb changes the color of the tab. */
-
 body::-webkit-scrollbar {
     width: .3rem;
     background: transparent;
@@ -42,8 +39,7 @@ body::-webkit-scrollbar-track {
     background: var(--bgc1);
 }
 
-/* lines 42-137 are for the navbar. */
-
+/* lines 43-138 are for the navbar. */
 nav {
     display: flex;
     justify-content: space-between;
@@ -80,7 +76,7 @@ a {
     color: var(--text);
     text-decoration: none;
 }
-
+/* twitter and linked in logo */
 #navlogos {
     padding: 2rem;
 }
@@ -95,6 +91,7 @@ a {
     max-height: 1.8rem;
 }
 
+/* lines 95-138 .dropdown makes a logo appear which when hovered over, will bring a dropdown menu for the same nav links */
 .dropdown img {
     display: none;
     max-width: 1.8rem;
@@ -103,13 +100,12 @@ a {
     bottom:15px;
     right: 40px;
 }
-
+/* hides dropdown links until dropdown img gets hovered over. */
 .dropdownlinks {
     display: none;
 }
 
 /* Small screen media query */
-
 @media screen and (max-width:650px) {
     #navlinks, #navlogos {
         display: none;
@@ -118,13 +114,13 @@ a {
         display: block
     }
 } 
-
+/* adds lines between dropdown options */
 .dropdownlinks li:not(last-child) {
     border-bottom: 1px solid black;
     padding-bottom: 5px;
 
 }
-
+/* adds a dropdown menu upon hover that contains nav links */
 .dropdown:hover .dropdownlinks{
     display:flex;
     position: absolute;
@@ -141,8 +137,7 @@ a {
     flex-direction:column;
 }
 
-/* This is the main image at the back of the page */
-
+/* This is the main image at the back of the page. This adds a parallax effect on the page as well */
 .hero-parallax {
     overflow: hidden;
     padding-bottom: 65%;
@@ -154,8 +149,7 @@ a {
     z-index: -1;
 }
 
-/* About Me css styles lines 154 - 193 */
-
+/* About Me css styles lines 153 - 192 */
 #aboutme {
     display: flex;
     flex-direction: column;
@@ -175,9 +169,9 @@ h2 {
 h3 {
     font-size: 1.5rem;
 }
-
+/* adds a transparent gradient effect on "About Me"*/
 #aboutme h2 {
-    padding: 40px 0px 20px 0px;
+    padding: 40px 15px 20px 15px;
     background: linear-gradient(var(--transp),80%,var(--bgc2));
 }
 
@@ -197,17 +191,16 @@ h3 {
     padding: 0px 10px 10px 10px;
 } 
 
-/*  Projects css styles */
-
+/*  Projects css styles lines 195 - 238 */
 #projects {
     background: var(--text);
     text-shadow: 0px 0px 10px rgb(124, 121, 108);
 }
-
+/* makes project images into columns rows, 1 img large and 2 img small */
 .projects {
     display: inline-flex;
 }
-
+/* adds a blue filter on the project images */
 .project1 a img {
     border-radius: 5%;
     z-index: 7;
@@ -229,7 +222,7 @@ h3 {
     z-index: 11;
     margin-left: 40px;
     transform: translatey(30px);
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 .projectBox a img {
@@ -238,14 +231,13 @@ h3 {
     border-radius: 5%;
     filter: blur(8px);
 }
-
+/* on hover, it removes the blue effect on project images */
 a img:hover {
     filter: none;
     transition: filter .5s;
 }
 
-/* Contact css styles */
-
+/* Contact css styles lines 241 - 255*/
 #contact {
     background: var(--bcg5);
     text-shadow: var(--shadow);
@@ -262,8 +254,7 @@ a img:hover {
     font-size: 1.4rem;
 }
 
-/* Footer css style */
-
+/* Footer css style lines 258 - 263*/
 footer {
     background: var(--bgc1);
     text-align: center;

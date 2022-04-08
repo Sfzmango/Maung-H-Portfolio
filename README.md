@@ -7,6 +7,7 @@
 - [Remarks](#remarks)
 - [Used Programs](#used-programs)
 - [Site Demonstration](#site-demonstration)
+- [Deployed Link](#deployed-link)
 - [Credits and License](#credits-and-License)
 
 ## <ins> Description of the Task: </ins>
@@ -30,6 +31,12 @@ I have added numerous comments along both the index.html and style.css files to 
     Below is a demonstration of how the page's scroll parallax and the blur removal on hover styles work. 
 ![Site Demonstration](./assets/images/site-demonstration.gif)
 
+## <ins> Deployed Link: </ins>
+
+- [Github Deployed Website](https://github.com/Sfzmango/Maung-H-Portfolio)
+- [Github Repository](https://sfzmango.github.io/Maung-H-Portfolio/)
+
 ## <ins> Credits and License: </ins>
 
-All rights and ownership belong to Maung Htike.
+- [Maung Htike Github](https://github.com/Sfzmango)
+- [Maung Htike LinkedIn](https://www.linkedin.com/in/maung-htike-482b4b143)

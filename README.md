@@ -37,8 +37,8 @@ I have added numerous comments along both the index.html and style.css files to 
 
 ## <ins> Deployed Links: </ins>
 
-- [Github Deployed Website](https://github.com/Sfzmango/Maung-H-Portfolio)
-- [Github Repository](https://sfzmango.github.io/Maung-H-Portfolio/)
+- [Github Repository](https://github.com/Sfzmango/Maung-H-Portfolio)
+- [Github Deployed Website](https://sfzmango.github.io/Maung-H-Portfolio/)
 
 ## <ins> Credits and License: </ins>
 
